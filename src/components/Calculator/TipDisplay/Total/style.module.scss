@@ -1,0 +1,40 @@
+$total-color: hsl(172, 67%, 45%);
+
+.p {
+  margin-top: 0;
+}
+
+.totalContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  &1 {
+    font-weight: bold;
+    font-size: 0.6rem;
+    color: white;
+  }
+
+  &2 {
+    font-weight: bold;
+    font-size: 0.5rem;
+  }
+}
+
+.total {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60%;
+  direction: rtl;
+  color: $total-color;
+  overflow-x: scroll;
+}
+
+@media (max-width: 400px) {
+  .total {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,45 @@
+$amount-color: hsl(172, 67%, 45%);
+
+.p {
+  margin-top: 0;
+}
+
+.amountContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+.title {
+  &1 {
+    font-weight: bold;
+    font-size: 0.6rem;
+    color: white;
+  }
+
+  &2 {
+    font-weight: bold;
+    font-size: 0.5rem;
+  }
+}
+
+.amount {
+  font-size: 2rem;
+  font-weight: bold;
+  width: 60%;
+  direction: rtl;
+  color: $amount-color;
+  overflow-x: scroll;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+@media (max-width: 400px) {
+  .amount {
+    font-size: 1.5rem;
+  }
+}

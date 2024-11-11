@@ -1,0 +1,40 @@
+$background-color: hsl(189, 41%, 97%);
+$input-border-color: hsl(172, 67%, 45%);
+$input-color: hsl(183, 100%, 15%);
+
+label {
+  font-size: 0.6rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  background-color: $background-color;
+  color: $input-color;
+  border: none;
+  outline: none;
+
+  &[type="number"] {
+    border-radius: 0.2rem;
+
+    &:focus {
+      border: 2px solid $input-border-color;
+    }
+  }
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+  width: 50%;
+  height: 100%;
+  padding: 1rem;
+}
+
+@media (max-width: 400px) {
+  .inputContainer {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}

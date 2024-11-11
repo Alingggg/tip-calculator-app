@@ -1,0 +1,27 @@
+$placeholder-color: hsl(184, 14%, 56%);
+
+.billContainer {
+    position: relative;
+}
+
+.label {
+    display: block;
+}
+
+.input {
+    font-weight: bold;
+    width: 100%;
+    height: 1.5rem;
+    direction: rtl;
+    padding-left: 1.4rem;
+
+    &::placeholder {
+        color: $placeholder-color;
+    }
+}
+
+.svg {
+    position: absolute;
+    left: 0.5rem;
+    top: 1.55rem;
+}

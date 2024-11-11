@@ -1,0 +1,77 @@
+$option-background-color: hsl(183, 100%, 15%);
+$custom-placeholder-color: hsl(186, 14%, 43%);
+$option-hover-background-color: hsl(172, 67%, 45%);
+$option-hover-color: hsl(183, 100%, 15%);
+$optin-active-color: hsl(185, 41%, 84%);
+
+@mixin highlighted-button-style {
+  font-weight: bold !important;
+  background-color: $option-hover-background-color !important;
+  color: $option-hover-color !important;
+}
+
+.highlightedButton {
+  @include highlighted-button-style;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input {
+  padding: 0.2rem 0.6rem;
+}
+
+.tipOptionContainer {
+  font-size: 1rem;
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.option {
+  border-radius: 0.2rem;
+  background-color: $option-background-color;
+  color: white;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:active, &:focus-visible {
+    @include highlighted-button-style;
+    background-color: $optin-active-color !important;
+  }
+}
+
+.custom {
+  font-size: 0.8rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.2rem;
+  font-weight: bold;
+  direction: rtl;
+
+  &::placeholder {
+    color: $custom-placeholder-color;
+  }
+
+  &::-webkit-input-placeholder {
+    text-align: center;
+  }
+}
+
+@media (max-width: 400px) {
+  .tipOptionContainer {
+    grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+  }
+}
