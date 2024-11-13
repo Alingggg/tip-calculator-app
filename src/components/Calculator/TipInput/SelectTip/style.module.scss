@@ -59,7 +59,7 @@ input {
   height: 100%;
   border-radius: 0.2rem;
   font-weight: bold;
-  direction: rtl;
+  text-align: right;
 
   &::placeholder {
     color: $custom-placeholder-color;
